@@ -13,5 +13,6 @@
 //Declare functions
 //void setupLineTracker();
 //void doLineTracker();
+void setupBluetooth();
 
 #endif 

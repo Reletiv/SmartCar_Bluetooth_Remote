@@ -14,8 +14,7 @@ void rijdRechtdoor();
 
 int RechtLinks = 0;
 
-// Definieer een drempelwaarde voor obstakeldetectie in centimeters
-const int threshold = 30;  // Als de afstand kleiner is dan 20 cm, stuur bij
+const int threshold = 30;  
 
 // Variabelen om de tijd en afstand op te slaan
 long distanceFront, distanceLeft, distanceRight;
@@ -58,13 +57,13 @@ void doAutonomous() {
   distanceRight = getDistance(TRG3, ECHO3);
 
   // Toon de afstanden in de seriële monitor
-  Serial.print("Voor: ");
-  Serial.print(distanceFront);
-  Serial.print(" cm, Links: ");
-  Serial.print(distanceLeft);
-  Serial.print(" cm, Rechts: ");
-  Serial.print(distanceRight);
-  Serial.println(" cm");
+  // Serial.print("Voor: ");
+  // Serial.print(distanceFront);
+  // Serial.print(" cm, Links: ");
+  // Serial.print(distanceLeft);
+  // Serial.print(" cm, Rechts: ");
+  // Serial.print(distanceRight);
+  // Serial.println(" cm");
 
   // Controleer of sturen al is ingezet
   if (!isSturenIngezet) {
@@ -172,7 +171,6 @@ long getDistance(int trigPin, int echoPin) {
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  // Meet de tijd dat de echo binnenkomt met een Timeout van echo op 10 ms
   long duration = pulseIn(echoPin, HIGH, 10000); 
 
   // Bereken de afstand in cm

@@ -9,10 +9,9 @@
 //Include files
 #include "settings.h"
 #include <Arduino.h>
-//#include <pcf8574.h>
 
 //Declare functions
 void setupMotors(void);
-//void doLineTracker();
+void setMotors(int Lspeed, int Rspeed);
 
 #endif 

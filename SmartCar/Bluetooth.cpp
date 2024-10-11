@@ -4,3 +4,8 @@
 *  26-09-2024
 */
 #include "Bluetooth.h"
+
+void setupBluetooth()
+{
+  // Niks
+}
