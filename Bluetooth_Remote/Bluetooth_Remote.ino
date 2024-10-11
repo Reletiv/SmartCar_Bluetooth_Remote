@@ -94,7 +94,8 @@ void setup() {
   delay(500);
   BTSerial.println("AT+IMME1");  // Enable immediate mode (auto-connect)
   delay(500);
-  BTSerial.println("AT+COND0B5C2D7744E");  // Replace with the car's HM-10 address
+  //BTSerial.println("AT+COND0B5C2D7744E");  // Replace with the car's HM-10 address
+  BTSerial.println("AT+CON84C692874862");  // Replace with the car's HM-10 address School
   delay(2000);
   Serial.println("Master HM-10 configured and ready.");
 }
@@ -235,7 +236,8 @@ void reconnectBluetooth() {
   delay(100);
   BTSerial.println("AT+IMME1");  // Enable immediate mode (auto-connect)
   delay(100);
-  BTSerial.println("AT+COND0B5C2D7744E");  // Replace with the car's HM-10 address
+  //BTSerial.println("AT+COND0B5C2D7744E");  // Replace with the car's HM-10 address
+  BTSerial.println("AT+CON84C692874862");  // Replace with the car's HM-10 address School
   delay(800);
   Serial.println("Reconnection attempt completed.");
 }
